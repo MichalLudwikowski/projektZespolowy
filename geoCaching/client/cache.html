@@ -1,11 +1,15 @@
 <template name="cache">
-    <div type="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{name}}</h3>
-            </div>
-            <div class="panel-body">
-                {{desc}}
+    <div class="cache">
+        <div class="cache-content">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <p style="font-size:22px" class="panel-title">{{name}}
+                        <button id="del" type="button" class="btn btn-info pull-right">Więcej</button>
+                    </p>
+                </div>
+                <div class="panel-body">
+                    {{desc}}
+                </div>
             </div>
         </div>
     </div>
