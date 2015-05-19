@@ -6,7 +6,7 @@ Template.map.helpers({
         // Make sure the maps API has loaded
         if (GoogleMaps.loaded()) {
             // Map initialization options
-            var mark = Session.get("markId");
+            var mark = Session.get("mark");
             return {
                 center: new google.maps.LatLng(mark[0].coord_x, mark[0].coord_y),
                 zoom: 8

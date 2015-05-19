@@ -1,0 +1,1 @@
+Caches = new Mongo.Collection("caches");
