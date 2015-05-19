@@ -1,4 +1,47 @@
 <template name="navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="{{ pathFor 'main'}}">Geocaching</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    {{#if isLoggedIn}}
+                    <li><a href="#contact">Dodaj skrzynkę</a>
+                    </li>
+                    {{/if}}
+                </ul>
+                {{#if isLoggedIn}}
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.username}} <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Edytuj profil</a>
+                            </li>
+                            <li><a href="#">Moje skrzynki</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Wyloguj</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="{{pathFor 'login' }}">Zaloguj się</a>
+                    </li>
+                </ul>
+                {{/if}}
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+</template>
+<!--
+<template name="navbar">
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="container">
@@ -45,3 +88,4 @@
         </div>
     </div>
 </template>
+-->
