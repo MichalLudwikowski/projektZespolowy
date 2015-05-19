@@ -10,6 +10,3 @@ Router.route('/login', function () {
 Router.route('/register', function () {
     this.render('register');
 });
-Router.route('/hotelForm', function () {
-    this.render('hotelForm');
-});
