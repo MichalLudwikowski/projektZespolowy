@@ -10,3 +10,6 @@ Router.route('/login', function () {
 Router.route('/register', function () {
     this.render('register');
 });
+Router.route('/map', function () {
+    this.render('map');
+});
