@@ -4,7 +4,6 @@ Template.cache.events({
         var data = Caches.find({
             name: name
         }).fetch();
-        console.log(data);
         Session.set("mark", data);
     }
 });
