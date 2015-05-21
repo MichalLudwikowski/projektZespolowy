@@ -13,3 +13,9 @@ Router.route('/register', function () {
 Router.route('/map', function () {
     this.render('map');
 });
+Router.route('/newcache', function () {
+    this.render('newcache');
+});
+Router.route('/cachedetails', function () {
+    this.render('cachedetails');
+});

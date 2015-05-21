@@ -10,7 +10,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     {{#if isLoggedIn}}
-                    <li><a href="#contact">Dodaj skrzynkę</a>
+                    <li><a href="{{pathFor 'newcache'}}">Dodaj skrzynkę</a>
                     </li>
                     {{/if}}
                 </ul>
@@ -24,7 +24,7 @@
                             <li><a href="#">Moje skrzynki</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="#">Wyloguj</a>
+                            <li id="logout"><a href="#">Wyloguj</a>
                             </li>
                         </ul>
                     </li>

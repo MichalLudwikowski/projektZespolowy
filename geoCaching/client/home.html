@@ -6,57 +6,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
+        <title>GeoCaching</title>
         <link href="css/half-slider.css" rel="stylesheet">
     </head>
 
     <body>
-        <header id="myCarousel" class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="fill" style="background-image:url('http://geocaching.co.uk/wp-content/uploads/2014/04/geocache_en2.jpg');background-size:100% 100%;"></div>
-                    <div class="carousel-caption">
-                        <h2></h2>
+        <div>
+            <header id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="fill" style="background-image:url('http://geocaching.co.uk/wp-content/uploads/2014/04/geocache_en2.jpg');background-size:100% 100%;"></div>
+                        <div class="carousel-caption">
+                            <h2></h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" style="background-image:url('http://bringarena.com/wp-content/uploads/2012/05/33029-hi-Geocaching-11.jpg');"></div>
+                        <div class="carousel-caption">
+                            <h2>Spędź aktywnie czas!</h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="fill" style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/d/d7/Classic_Geocache.jpg');"></div>
+                        <div class="carousel-caption">
+                            <h2 style="color:rgb(224, 253, 3);">Dodawaj własne skrzynki !</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="fill" style="background-image:url('http://bringarena.com/wp-content/uploads/2012/05/33029-hi-Geocaching-11.jpg');"></div>
-                    <div class="carousel-caption">
-                        <h2>Spędź aktywnie czas!</h2>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="fill" style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/d/d7/Classic_Geocache.jpg');"></div>
-                    <div class="carousel-caption">
-                        <h2 style="color:rgb(224, 253, 3);">Dodawaj własne skrzynki !</h2>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="icon-prev"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="icon-next"></span>
-            </a>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
 
-        </header>
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Witaj na GeoCaching !</h1>
-                    <p>Strona jest dedykowana osobom zaczynąjacym lub aktywnie bawiącym się w gry geoCaching. Nasza aplikacja umożliwia dodawanie własnej skrzynki, ale przede wszystkim pozwala na przeglądanie isteniejących skrzynek innych użytkowników oraz wytyczć do nich trasę. Aplikacja podzialona jest na część webową oraz mobilą. Zalecamy zarządzanie skrzynkami i poszukiwaniami poprzez wersję webową. Podczas gry w terenie można wykorzystać aplikację mobilną.</p>
-                    <a href="{{pathFor 'main'}}">
-                        <input type="button" class="btn btn-primary" value="Przejdź do strony głównej">
-                    </a>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Witaj na GeoCaching !</h1>
+                        <p>Strona jest dedykowana osobom zaczynąjacym lub aktywnie bawiącym się w gry geoCaching. Nasza aplikacja umożliwia dodawanie własnej skrzynki, ale przede wszystkim pozwala na przeglądanie isteniejących skrzynek innych użytkowników oraz wytyczć do nich trasę. Aplikacja podzialona jest na część webową oraz mobilą. Zalecamy zarządzanie skrzynkami i poszukiwaniami poprzez wersję webową. Podczas gry w terenie można wykorzystać aplikację mobilną.</p>
+                        <a href="{{pathFor 'main'}}">
+                            <input type="button" class="btn btn-primary" value="Przejdź do strony głównej">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
-
-
 </template>

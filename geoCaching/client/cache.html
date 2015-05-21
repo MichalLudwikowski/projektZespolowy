@@ -4,13 +4,15 @@
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <p style="font-size:22px" class="panel-title">{{name}}
-                        <button id="del" type="button" class="btn btn-info pull-right">Więcej</button>
+                        <a href="{{pathFor 'cachedetails'}}">
+                            <button id="more" type="button" class="btn btn-info pull-right">Więcej</button>
+                        </a>
                     </p>
                 </div>
                 <div class="panel-body">
                     {{desc}}
                     <a href="{{pathFor 'map'}}">
-                        <button class="btn btn-primary pull-right" id="take" value="{{name}}">Pokaż na mapie</button>
+                        <button class="btn btn-primary pull-right" id="take">Pokaż na mapie</button>
                     </a>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-// Inside the if (Meteor.isClient) block, right after Template.body.helpers:
 Template.newcache.events({
     "click #submitbutton": function (event) {
         // This function is called when the new task form is submitted
@@ -6,15 +5,17 @@ Template.newcache.events({
         var name = $("#name").val(),
             desc = $("#desc").val(),
             coord_x = $("#coord_x").val(),
-            coord_y = $("#coord_y").val();
+            coord_y = $("#coord_y").val(),
+            owner = Meteor.userId();
 
-        caches.insert({
+        Caches.insert({
+            owner: owner,
             name: name,
             desc: desc,
             coord_x: coord_x,
             coord_y: coord_y
         });
-
+        Router.go('main');
 
 
         // Prevent default form submit
