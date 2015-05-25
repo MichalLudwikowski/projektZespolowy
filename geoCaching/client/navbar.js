@@ -8,7 +8,11 @@ Template.navbar.helpers({
 });
 Template.navbar.events({
     'click #logout': function () {
+        Router.go("main");
         Meteor.logout();
-        Router.go('main');
+    },
+
+    'click #myProfile': function () {
+        Router.go("myProfile");
     }
 });
