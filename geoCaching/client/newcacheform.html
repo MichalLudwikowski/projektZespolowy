@@ -2,29 +2,30 @@
     {{>navbar}}
     <div class="col-md-6" style="padding-top: 70px">
         <div class="panel panel-default" style=margin:20px;margin-right:20px>
-            <div class="panel-body">
+            <div class="panel-body" style="background-color: #222">
                 <div class="col-md-12">
                     <form role="form">
                         <div class="col-md-12">
-                            <label for="name">Nazwa:</label>
+                            <label for="name" style="color: #2050ff">Nazwa:</label>
+                            <input type="text" class="form-control" id="name" required>
                             <input type="text" class="form-control" id="name" required>
                         </div>
                         <div class="col-md-12">
-                            <label for="desc">Opis:</label>
+                            <label for="desc" style="color: #2050ff">Opis:</label>
                             <input type="text" class="form-control" id="desc">
                         </div>
                         <div class="col-md-12">
-                            <label for="coord_x">Długość geograficzna:</label>
+                            <label for="coord_x" style="color: #2050ff">Długość geograficzna:</label>
                             <input type="text" class="form-control" id="coord_x">
                         </div>
                         <div class="col-md-12">
-                            <label for="coord_y">Szerokość geograficzna:</label>
+                            <label for="coord_y" style="color: #2050ff">Szerokość geograficzna:</label>
                             <input type="text" class="form-control" id="coord_y">
                         </div>
                     </form>
 
                     <div class="col-md-12" style="text-align:center;">
-                        <button type="submit" class="btn btn-default" id="submitbutton">Wyślij</button>
+                        <button type="submit" class="btn btn-primary pull-right" style="margin: 7px" id="submitbutton">Wyślij</button>
                     </div>
 
                 </div>

@@ -10,5 +10,9 @@ Template.navbar.events({
     'click #logout': function () {
         Router.go("main");
         Meteor.logout();
+    },
+
+    'click #myProfile': function () {
+        Router.go("myProfile");
     }
 });

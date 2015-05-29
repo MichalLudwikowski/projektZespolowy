@@ -1,0 +1,34 @@
+<template name="myProfile">
+    {{> navbar}}
+    <div class="col-md-6" style="padding-top: 70px">
+        <div class="panel panel-default" style=margin:20px;margin-right:20px>
+            <div class="panel-body" style="background-color: #222">
+                <div class="col-md-12">
+                    <form role="form">
+                        <div class="col-md-12">
+                            <label for="name" style="color: #2050ff">Nazwa użytkownika:</label>
+                            <input type="text" class="form-control" id="username" value="{{userName}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="desc" style="color: #2050ff">Imię:</label>
+                            <input type="text" class="form-control" id="name" value="{{name}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_x" style="color: #2050ff">Nazwisko:</label>
+                            <input type="text" class="form-control" id="surname" value="{{surname}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_y" style="color: #2050ff">Wiek:</label>
+                            <input type="text" class="form-control" id="age" value="{{age}}">
+                        </div>
+                    </form>
+
+                    <div class="col-md-12" style="text-align:center;">
+                        <button type="submit" class="btn btn-primary pull-right" style="margin: 7px" id="submitbutton">Zapisz</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

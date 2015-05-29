@@ -19,7 +19,7 @@
                     <li class="dropdown pull-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.username}} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Edytuj profil</a>
+                            <li><a id="myProfile" href="{{pathFor 'myProfile'}}">Edytuj profil</a>
                             </li>
                             <li><a href="#">Moje skrzynki</a>
                             </li>
@@ -40,52 +40,3 @@
         </div>
     </nav>
 </template>
-<!--
-<template name="navbar">
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2">
-                        <a href="{{ pathFor 'main'}}">
-                            <input type="button" class="btn btn-info" value="Strona Główna">
-                        </a>
-                    </div>
-                    {{#if isLoggedIn}}
-                    <div class="col-md-2">
-                        <a href="">
-                            <input type="button" class="btn btn-info" value="Dodaj skrzynke">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="">
-                            <input type="button" class="btn btn-info" value="Przeglądaj skrzynki">
-                        </a>
-                    </div>
-
-
-                    <div class="col-md-3 "></div>
-                    <div class="col-md-2">
-                        <p>Zalogowany jako {{currentUser.username}}</p>
-                    </div>
-                    <div class="col-md-1">
-                        <input type="button" class="btn btn-danger" id="logout" value="Wyloguj"> </div>
-                    {{else}}
-                    <div class="col-md-8 "></div>
-                    <div class="col-md-1 ">
-                        <a href="{{pathFor 'login' }} ">
-                            <input type="button" class="btn btn-info" value="Zaloguj">
-                        </a>
-                    </div>
-                    <div class="col-md-1">
-                        <a href="{{pathFor 'register' }}">
-                            <input type="button" class="btn btn-warning" value="Utwóż konto">
-                        </a>
-                    </div>
-                    {{/if}}
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
--->
