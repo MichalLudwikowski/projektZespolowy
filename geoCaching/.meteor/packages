@@ -11,3 +11,4 @@ iron:router
 accounts-password
 mrt:bootstrap-3
 dburles:google-maps
+mdg:geolocation

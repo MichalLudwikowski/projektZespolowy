@@ -19,3 +19,6 @@ Router.route('/newcache', function () {
 Router.route('/cachedetails', function () {
     this.render('cachedetails');
 });
+Router.route('/location', function () {
+    this.render('location');
+});

@@ -1,6 +1,6 @@
 <template name="cachedetails">
     {{>navbar}}
-    <div class="container">{{#each details}}
+    <div class="container" style="padding-top : 70px; ">{{#each details}}
         <div class="panel panel-success">
             <div class="panel-heading" id="wlasciciel">
                 <p style="font-size:18px;" class="panel-title"><b>Właściciel skrzynki : {{>owner}}</b>
@@ -12,8 +12,9 @@
                 <p style="font-size:16px;"> Wspołżędne geograficzne : ({{coord_x}},{{coord_y}})</p>
                 <p style="font-size:16px;"> Opis :</p>
                 {{desc}}
-
-                <input type="button" class="btn btn-primary pull-right" value="Szukaj skrzynki" id="target"> </div>
+                <a href="{{pathFor 'location'}}">
+                    <input type="button" class="btn btn-primary pull-right" value="Szukaj skrzynki" id="target"> </a>
+            </div>
         </div>{{/each}}</div>
 
 </template>
