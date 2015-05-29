@@ -14,5 +14,9 @@ Template.navbar.events({
 
     'click #myProfile': function () {
         Router.go("myProfile");
+    },
+
+    'click #userCaches': function () {
+        Router.go("userCachesList");
     }
 });

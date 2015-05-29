@@ -22,3 +22,6 @@ Router.route('/cachedetails', function () {
 Router.route('/myProfile', function () {
     this.render('myProfile');
 });
+Router.route('/userCachesList', function () {
+    this.render('userCachesList');
+});

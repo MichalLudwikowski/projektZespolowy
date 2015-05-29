@@ -1,0 +1,8 @@
+<template name="userCachesList">
+    {{>navbar}}
+    <div class="container" role="main">
+    <div class="caches" role="row" style="padding-top: 70px">
+        {{#each caches}} {{> userCachesListItem}} {{/each}}
+    </div>
+    </div>
+</template>
