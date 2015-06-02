@@ -23,7 +23,6 @@ Template.myProfile.helpers({
 Template.myProfile.events({
     'click #submitbutton': function () {
         var id = Meteor.userId();
-        var nazwa = document.getElementById('username').value;
         var imie = document.getElementById('name').value;
         var nazwisko = document.getElementById('surname').value;
         var wiek = document.getElementById('age').value;

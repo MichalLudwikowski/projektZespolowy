@@ -5,5 +5,11 @@ Template.cachedetails.helpers({
             _id: details[0]._id
         });
         return cachy;
+    },
+
+    comments: function () {
+        return Comments.find({
+            cacheId: this._id
+        });
     }
 });
