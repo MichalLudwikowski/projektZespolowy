@@ -26,10 +26,11 @@ Router.route('/myProfile', function () {
     this.render('myProfile');
 });
 Router.route('searchCache', {
-            path: '/searchCache/:_id',
-            data: function () {
-                return Caches.findOne(this.params._id);
-            }
-            Router.route('/userCachesList', function () {
-                this.render('userCachesList');
-            });
+    path: '/searchCache/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
+});
+Router.route('/userCachesList', function () {
+    this.render('userCachesList');
+});
