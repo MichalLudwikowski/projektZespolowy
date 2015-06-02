@@ -6,9 +6,10 @@ Template.map.helpers({
         // Make sure the maps API has loaded
         if (GoogleMaps.loaded()) {
             // Map initialization options
-            var mark = Session.get("mark");
+            var mark = Caches.findOne(this._id);
+            console.log(mark);
             return {
-                center: new google.maps.LatLng(mark[0].coord_x, mark[0].coord_y),
+                center: new google.maps.LatLng(mark.coord_x, mark.coord_y),
                 zoom: 8
             };
         }

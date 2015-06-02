@@ -4,24 +4,17 @@
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <p style="font-size:22px" class="panel-title">{{name}}
-                        <a href="{{pathFor 'cachedetails'}}">
+                        <a href="{{pathFor 'cachedetails' _id=this._id}}">
                             <button id="more" type="button" class="btn btn-primary pull-right">Więcej</button>
                         </a>
                     </p>
                 </div>
                 <div class="panel-body">
-                    <div class="col-md-10">
-                        {{desc}}
-                    </div>
-                    <div class="col-md-2">
-                        <div class="row">
-                            <a href="{{pathFor 'map'}}">
-                                <button class="btn btn-primary pull-right" id="take">Pokaż na mapie</button>
-                            </a>
-                        </div>
-                    </div>
+                    {{desc}}
+                    <a href="{{pathFor 'map' _id=this._id}}">
+                        <button class="btn btn-primary pull-right" id="take">Pokaż na mapie</button>
+                    </a>
                 </div>
-
             </div>
         </div>
     </div>

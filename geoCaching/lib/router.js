@@ -10,17 +10,29 @@ Router.route('/login', function () {
 Router.route('/register', function () {
     this.render('register');
 });
-Router.route('/map', function () {
-    this.render('map');
+Router.route('map', {
+    path: '/map/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
 });
 Router.route('/newcache', function () {
     this.render('newcache');
 });
-Router.route('/cachedetails', function () {
-    this.render('cachedetails');
+Router.route('cachedetails', {
+    path: '/cachedetails/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
 });
 Router.route('/myProfile', function () {
     this.render('myProfile');
+});
+Router.route('searchCache', {
+    path: '/searchCache/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
 });
 Router.route('/userCachesList', function () {
     this.render('userCachesList');
