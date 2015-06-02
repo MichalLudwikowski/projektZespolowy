@@ -11,12 +11,11 @@
                 </div>
                 <div class="panel-body">
                     {{desc}}
-                    <a href="{{pathFor 'map'}}">
+                    <a href="{{pathFor 'map' _id=this._id}}">
                         <button class="btn btn-primary pull-right" id="take">Pokaż na mapie</button>
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
