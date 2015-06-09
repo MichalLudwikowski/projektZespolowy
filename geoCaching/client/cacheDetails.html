@@ -17,6 +17,6 @@
             </div>
         </div>{{/each}}</div>
     <div class="container">
-        {{> logList}} {{> logSubmit}}
+        {{#each logs}} {{> log}} {{/each}} {{> logSubmit}}
     </div>
 </template>

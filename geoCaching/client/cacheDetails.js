@@ -6,9 +6,10 @@ Template.cachedetails.helpers({
         return cachy;
     },
 
-    comments: function () {
-        return Comments.find({
+    logs: function () {
+        var log = Logs.find({
             cacheId: this._id
         });
+        return log;
     }
 });
