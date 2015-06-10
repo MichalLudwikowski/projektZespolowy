@@ -1,0 +1,11 @@
+<template name="cacheListAll">
+    {{>navbar}}
+    <div class="container">
+        <div class="caches" role="row" style="padding-top: 70px">
+            {{#each cachesAll}} {{> cache}} {{/each}}
+        </div>
+        <a href="{{pathFor 'main'}}">
+            <button type="button" class="btn btn-primary" style="width:100%;">Pokaż najbliższe skrzynki</button>
+        </a>
+    </div>
+</template>
