@@ -1,4 +1,5 @@
 var lat, lng, mark, distance, id;
+var playerImage = 'http://memsoria.pl/public/addons/1052.gif';
 var gmarkers = [];
 Meteor.startup(function () {
     GoogleMaps.load();
@@ -6,11 +7,9 @@ Meteor.startup(function () {
 Template.searchCache.helpers({
     exampleMapOptions2: function () {
         navigator.geolocation.getCurrentPosition(handleSync);
-        // Make sure the maps API has loaded
         id = this._id;
         mark = Caches.findOne(this._id);
         if (GoogleMaps.loaded()) {
-            // Map initialization options
             return {
                 center: new google.maps.LatLng(mark.coord_x, mark.coord_y),
                 zoom: 12
@@ -26,10 +25,11 @@ var handleSync = function (position) {
 Template.searchCache.onCreated(function () {
     navigator.geolocation.getCurrentPosition(handleSync);
     GoogleMaps.ready('exampleMap2', function (map) {
-        // Add a marker to the map once it's rea
+        var image = 'http://content.update.parallelkingdom.com/chest_gold.png';
         var marker = new google.maps.Marker({
             position: map.options.center,
-            map: map.instance
+            map: map.instance,
+            icon: image
         });
     });
     Meteor.setInterval(function () {
@@ -38,7 +38,8 @@ Template.searchCache.onCreated(function () {
         GoogleMaps.ready('exampleMap2', function (map) {
             var playerMarker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
-                map: map.instance
+                map: map.instance,
+                icon: playerImage
             });
             distance = getDistance(mark.coord_x, mark.coord_y, lat, lng);
             gmarkers.push(playerMarker);
