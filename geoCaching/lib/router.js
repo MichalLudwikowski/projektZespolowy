@@ -40,3 +40,6 @@ Router.route('searchCache', {
 Router.route('/userCachesList', function () {
     this.render('userCachesList');
 });
+Router.route('/cacheListAll', function () {
+    this.render('cacheListAll');
+});

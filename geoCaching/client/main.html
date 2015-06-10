@@ -10,7 +10,11 @@
         <div type="row">
             <div class="container" role="main">
                 {{> cacheList}}
+                <a href="{{pathFor 'cacheListAll'}}">
+                    <button type="button" class="btn btn-primary" style="width:100%;">Pokaż wszystkie skrzynki</button>
+                </a>
             </div>
         </div>
+
     </body>
 </template>
