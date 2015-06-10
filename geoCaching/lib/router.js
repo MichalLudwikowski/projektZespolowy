@@ -26,8 +26,15 @@ Router.route('cachedetails', {
     }
 });
 Router.route('help', {
-    path: '/help'
+    path: '/help/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
 });
+/*
+Router.route('help', {
+    path: '/help'
+});*/
 Router.route('/myProfile', function () {
     this.render('myProfile');
 });

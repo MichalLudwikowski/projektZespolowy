@@ -1,4 +1,5 @@
-var lat, lng, mark, distance;
+var lat, lng, mark, distance, id;
+var gmarkers = [];
 Meteor.startup(function () {
     GoogleMaps.load();
 });
@@ -6,7 +7,7 @@ Template.searchCache.helpers({
     exampleMapOptions2: function () {
         navigator.geolocation.getCurrentPosition(handleSync);
         // Make sure the maps API has loaded
-        Session.set("help", this._id);
+        id = this._id;
         mark = Caches.findOne(this._id);
         if (GoogleMaps.loaded()) {
             // Map initialization options
@@ -30,28 +31,23 @@ Template.searchCache.onCreated(function () {
             position: map.options.center,
             map: map.instance
         });
-        setTimeout(function () {
-            var playerMarker = new google.maps.Marker({
-                position: new google.maps.LatLng(lat, lng),
-                map: map.instance
-            });
-        }, 5000);
     });
     Meteor.setInterval(function () {
         navigator.geolocation.getCurrentPosition(handleSync);
+
         GoogleMaps.ready('exampleMap2', function (map) {
             var playerMarker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 map: map.instance
             });
             distance = getDistance(mark.coord_x, mark.coord_y, lat, lng);
+            gmarkers.push(playerMarker);
+            removeMarkers();
             if (distance < 60) {
-
-
-                console.log(Session.get("help"));
-                Router.go('help');
+                Router.go('help', {
+                    _id: id
+                });
             }
-            console.log(distance);
         });
     }, 5000);
 });
@@ -69,3 +65,9 @@ var getDistance = function (p1, p2, p3, p4) {
     var d = R * c;
     return d;
 };
+
+function removeMarkers() {
+    for (i = 0; i < gmarkers.length - 1; i++) {
+        gmarkers[i].setMap(null);
+    }
+}
