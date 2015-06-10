@@ -6,10 +6,10 @@ Template.searchCache.helpers({
     exampleMapOptions2: function () {
         navigator.geolocation.getCurrentPosition(handleSync);
         // Make sure the maps API has loaded
+        Session.set("help", this._id);
         mark = Caches.findOne(this._id);
         if (GoogleMaps.loaded()) {
             // Map initialization options
-            console.log("tak2");
             return {
                 center: new google.maps.LatLng(mark.coord_x, mark.coord_y),
                 zoom: 12
@@ -45,6 +45,13 @@ Template.searchCache.onCreated(function () {
                 map: map.instance
             });
             distance = getDistance(mark.coord_x, mark.coord_y, lat, lng);
+            if (distance < 60) {
+
+
+                console.log(Session.get("help"));
+                Router.go('help');
+            }
+            console.log(distance);
         });
     }, 5000);
 });
@@ -60,5 +67,5 @@ var getDistance = function (p1, p2, p3, p4) {
         Math.sin(dLong / 2) * Math.sin(dLong / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c;
-    return d; // returns the distance in meter
+    return d;
 };
