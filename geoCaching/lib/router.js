@@ -25,6 +25,9 @@ Router.route('cachedetails', {
         return Caches.findOne(this.params._id);
     }
 });
+Router.route('help', {
+    path: '/help'
+});
 Router.route('/myProfile', function () {
     this.render('myProfile');
 });
@@ -36,4 +39,7 @@ Router.route('searchCache', {
 });
 Router.route('/userCachesList', function () {
     this.render('userCachesList');
+});
+Router.route('/cacheListAll', function () {
+    this.render('cacheListAll');
 });

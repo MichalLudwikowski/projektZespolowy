@@ -6,6 +6,7 @@ Template.newcache.events({
             desc = $("#desc").val(),
             coord_x = $("#coord_x").val(),
             coord_y = $("#coord_y").val(),
+            halpPlox = $("#help").val(),
             owner = Meteor.userId();
 
         Caches.insert({
@@ -13,7 +14,8 @@ Template.newcache.events({
             name: name,
             desc: desc,
             coord_x: coord_x,
-            coord_y: coord_y
+            coord_y: coord_y,
+            help: halpPlox
         });
         Router.go('main');
 

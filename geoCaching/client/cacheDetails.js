@@ -13,3 +13,14 @@ Template.cachedetails.helpers({
         return log;
     }
 });
+Template.cachedetails.events({
+    "click #target": function () {
+        Meteor.users.update({
+            _id: Meteor.userId()
+        }, {
+            $set: {
+                "profile.cache": this._id
+            }
+        });
+    }
+});
