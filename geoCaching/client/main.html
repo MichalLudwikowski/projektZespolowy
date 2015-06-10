@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        {{> navbar}}
+        {{> navbar}} {{#if getCache}}{{>currentCache}} {{else}}
         <div type="row">
             <div class="container" role="main">
                 {{> cacheList}}
@@ -15,6 +15,7 @@
                 </a>
             </div>
         </div>
+        {{/if}}
 
     </body>
 </template>

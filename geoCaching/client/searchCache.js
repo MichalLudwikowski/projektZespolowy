@@ -11,7 +11,7 @@ Template.searchCache.events({
             _id: Meteor.userId()
         }, {
             $set: {
-                "profile.cache": null
+                "profile.cache": ""
             }
         });
     }

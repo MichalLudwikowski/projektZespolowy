@@ -13,7 +13,7 @@ Template.help.events({
             _id: Meteor.userId()
         }, {
             $set: {
-                "profile.cache": null
+                "profile.cache": ""
             }
         });
     }
