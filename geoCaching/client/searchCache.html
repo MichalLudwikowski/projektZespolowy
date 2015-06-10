@@ -1,5 +1,9 @@
 <template name="searchCache">{{>navbar}}
-    <div class="container" style="padding-top : 55px;">
-    </div>{{> googleMap name="exampleMap2" options=exampleMapOptions2}}
+    <div class="container" style="padding-top : 51px;">
+    </div>
+    <a href="{{pathFor 'main'}}">
+        <button class="btn btn-danger" id="left" style="width:100%">Poddaje się!</button>
+    </a>
+    {{> googleMap name="exampleMap2" options=exampleMapOptions2}}
 
 </template>
