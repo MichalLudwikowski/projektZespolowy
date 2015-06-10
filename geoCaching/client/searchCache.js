@@ -3,6 +3,19 @@ var gmarkers = [];
 Meteor.startup(function () {
     GoogleMaps.load();
 });
+
+Template.searchCache.events({
+    "click #left": function () {
+        Meteor.users.update({
+            _id: Meteor.userId()
+        }, {
+            $set: {
+                "profile.cache": null
+            }
+        });
+    }
+});
+
 Template.searchCache.helpers({
     exampleMapOptions2: function () {
         navigator.geolocation.getCurrentPosition(handleSync);

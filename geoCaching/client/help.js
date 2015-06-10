@@ -6,3 +6,15 @@ Template.help.helpers({
         });
     }
 });
+
+Template.help.events({
+    "click #found": function () {
+        Meteor.users.update({
+            _id: Meteor.userId()
+        }, {
+            $set: {
+                "profile.cache": null
+            }
+        });
+    }
+});
