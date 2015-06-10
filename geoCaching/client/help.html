@@ -3,15 +3,18 @@
     <div class="cache" style="padding-top: 70px">
         <div class="cache-content">
             {{#each getIt}}
-            <div class="panel panel-success">
-                <div class="panel-heading">
+            <div class="container">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
 
-                    <p style="font-size:22px" class="panel-title">
-                        {{name}}
-                    </p>
-                </div>
-                <div class="panel-body">
-                    {{help}}
+                        <p style="font-size:22px" class="panel-title">
+                            {{name}}
+                        </p>
+                    </div>
+
+                    <div class="panel-body">
+                        {{help}}
+                    </div>
                 </div>
             </div>
             {{/each}}
