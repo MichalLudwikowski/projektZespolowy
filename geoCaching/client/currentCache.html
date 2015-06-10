@@ -1,0 +1,8 @@
+<template name="currentCache">
+    <div class="container" style="padding-top: 70px">
+        Aktualnie masz juz poszukiwaną skrzynkę
+        <a href="{{pathFor 'searchCache' _id=currentUser.profile.cache}}">
+            <input type="button" value="Przejdź do aktualnej skrzynki" class="btn btn-primary">
+        </a>
+    </div>
+</template>
