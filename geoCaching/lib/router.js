@@ -28,7 +28,9 @@ Router.route('cachedetails', {
 Router.route('help', {
     path: '/help/:_id',
     data: function () {
-        return Caches.findOne(this.params._id);
+        return Caches.findOne({
+            _id: this.params._id
+        });
     }
 });
 Router.route('profile', {
