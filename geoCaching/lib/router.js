@@ -47,6 +47,14 @@ Router.route('help', {
 Router.route('/myProfile', function () {
     this.render('myProfile');
 });
+
+Router.route('cacheEdit', {
+    path: '/cacheEdit/:_id',
+    data: function () {
+        return Caches.findOne(this.params._id);
+    }
+});
+
 Router.route('searchCache', {
     path: '/searchCache/:_id',
     data: function () {

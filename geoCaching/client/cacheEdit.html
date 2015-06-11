@@ -1,0 +1,41 @@
+<template name="cacheEdit">
+    {{> navbar}}
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="padding-top: 70px">
+        <div class="panel panel-default" style=margin:20px;margin-right:20px>
+            <div class="panel-body" style="background-color: #222">
+                <div class="col-md-12">
+                    <form role="form">
+                        {{#each cache}}
+                        <div class="col-md-12">
+                            <label for="name" style="color: #2050ff">Nazwa skrzynki:</label>
+                            <input type="text" class="form-control" id="cachename" value="{{name}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="desc" style="color: #2050ff">Koordynat x:</label>
+                            <input type="text" class="form-control" id="posx" value="{{coord_x}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_x" style="color: #2050ff">Koordynat y:</label>
+                            <input type="text" class="form-control" id="posy" value="{{coord_y}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_y" style="color: #2050ff">Opis:</label>
+                            <textarea rows="3" class="form-control" id="description" value="{{desc}}"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_y" style="color: #2050ff">Wskazówki:</label>
+                            <textarea rows="3" class="form-control" id="hint" value="{{help}}"></textarea>
+                        </div>
+                        {{/each}}
+                    </form>
+
+                    <div class="col-md-12" style="text-align:center;">
+                        <button type="submit" class="btn btn-primary pull-right" style="margin: 7px" id="submitbutton">Zapisz</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
