@@ -8,8 +8,9 @@ Template.register.events({
                 username: username,
                 password: password,
                 profile: {
-     cache: ""
- }
+                    cache: "",
+                    points: 0
+                }
             }, function (err) {
                 if (err) {
                     alert("Podany login już istnieje w bazie");

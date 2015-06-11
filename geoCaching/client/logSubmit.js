@@ -18,3 +18,10 @@ Template.logSubmit.events({
         $('#body').val("");
     }
 });
+Template.logSubmit.helpers({
+    isLoggedIn: function () {
+        if (Meteor.userId())
+            return true;
+        return false;
+    }
+});

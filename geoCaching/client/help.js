@@ -9,11 +9,16 @@ Template.help.helpers({
 
 Template.help.events({
     "click #found": function () {
+        var user = Meteor.users.findOne({
+            _id: Meteor.userId()
+        });
+        var points = user.profile.points + 10;
         Meteor.users.update({
             _id: Meteor.userId()
         }, {
             $set: {
-                "profile.cache": ""
+                "profile.cache": "",
+                "profile.points": points
             }
         });
     }

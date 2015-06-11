@@ -7,11 +7,13 @@ Template.newcache.events({
             coord_x = $("#coord_x").val(),
             coord_y = $("#coord_y").val(),
             halpPlox = $("#help").val(),
-            owner = Meteor.userId();
+            size = $('#options :selected').text();
+        owner = Meteor.userId();
 
         Caches.insert({
             owner: owner,
             name: name,
+            size: size,
             desc: desc,
             coord_x: coord_x,
             coord_y: coord_y,

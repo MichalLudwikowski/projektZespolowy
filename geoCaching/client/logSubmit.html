@@ -1,5 +1,7 @@
 <template name="logSubmit">
+
     <form name="comment" class="comment-form">
+        {{#if isLoggedIn}}
         <div class="control-group">
             <div class="controls">
                 <label for="body" style="font-size:24px;">Lognij</label>
@@ -12,5 +14,8 @@
                 <button id="sub" type="submit" class="btn">Dodaj log</button>
             </div>
         </div>
+        {{else}}
+        <p style="font-size:24px;text-align:center;"><b>Dodawanie logów dostępne tylko dla zalogowanych użytkowników</b>
+        </p>{{/if}}
     </form>
 </template>
