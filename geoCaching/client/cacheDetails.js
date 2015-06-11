@@ -11,6 +11,11 @@ Template.cachedetails.helpers({
             cacheId: this._id
         });
         return log;
+    },
+    isLogged: function () {
+        if (Meteor.userId())
+            return true;
+        return false;
     }
 });
 Template.cachedetails.events({

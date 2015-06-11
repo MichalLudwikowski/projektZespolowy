@@ -1,0 +1,38 @@
+<template name="profile">
+    {{> navbar}}
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="padding-top: 70px">
+        <div class="panel panel-success" style=margin:20px;margin-right:20px>
+            <div class="panel-heading">
+
+                <label for="name" style="color: #2050ff;font-size:20px;">Profil użytkownika: {{profFunc.username}}</label>
+
+            </div>
+
+
+            <div class="panel-body" style="background-color: #222">
+                <div class="col-md-12">
+                    <form role="form">
+
+                        <div class="col-md-12">
+                            <label for="desc" style="color: #2050ff">Imię: {{profFunc.profile.name}}</label>
+
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coordy_x" style="color: #2050ff">Nazwisko: {{profFunc.profile.surname}}</label>
+
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_y" style="color: #2050ff">Wiek: {{profFunc.profile.age}}</label>
+
+                        </div>
+                        <div class="col-md-12">
+                            <label for="coord_y" style="color: #2050ff">Punkty aktywności: {{profFunc.profile.points}}</label>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

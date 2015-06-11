@@ -16,11 +16,12 @@
                         {{help}}
                     </div>
                 </div>
+                <a href="{{pathFor 'cachedetails' _id=this._id}}">
+                    <button class="btn btn-succese pull-right" id="found" style:width100%;>Znalazłem</button>
+                </a>
             </div>
             {{/each}}
         </div>
-        <a href="{{pathFor 'cachedetails' _id=this._id}}">
-            <button class="btn btn-primary pull-right" id="found">Znalazłem</button>
-        </a>
+
     </div>
 </template>

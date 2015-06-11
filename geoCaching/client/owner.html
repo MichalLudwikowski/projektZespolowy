@@ -1,3 +1,2 @@
-<template name="owner">
-    {{#each ownerDetails}} {{username}} {{/each}}
+<template name="owner"> <a href="{{pathFor 'profile' name=ownerDetails.username}}">{{ownerDetails.username}}</a>
 </template>

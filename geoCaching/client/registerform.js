@@ -6,7 +6,10 @@ Template.register.events({
         if (isValidPassword(password)) {
             Accounts.createUser({
                 username: username,
-                password: password
+                password: password,
+                profile: {
+     cache: ""
+ }
             }, function (err) {
                 if (err) {
                     alert("Podany login już istnieje w bazie");

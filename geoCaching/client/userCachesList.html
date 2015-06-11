@@ -1,8 +1,14 @@
 <template name="userCachesList">
     {{>navbar}}
     <div class="container" role="main">
-    <div class="caches" role="row" style="padding-top: 70px">
-        {{#each caches}} {{> userCachesListItem}} {{/each}}
-    </div>
+        <div class="caches" role="row" style="padding-top: 70px">
+            {{#if czyMaSkrzynie}} {{#each caches}} {{> userCachesListItem}} {{/each}} {{else}}
+            <button class="btn btn-primary" style="width:100%;" href="{{pathFor 'newcache' }}">
+                <a>Nie masz swoich skrzynek ? Dodaj Nową </a>
+
+            </button>
+            {{/if}}
+
+        </div>
     </div>
 </template>

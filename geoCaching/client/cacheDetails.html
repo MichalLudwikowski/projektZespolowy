@@ -11,9 +11,10 @@
                 <p style="font-size:16px;">Nazwa : {{name}}</p>
                 <p style="font-size:16px;"> Wspołrzędne geograficzne : ({{coord_x}},{{coord_y}})</p>
                 <p style="font-size:16px;"> Opis :</p>
-                {{desc}}
+                {{desc}} {{#if isLogged}}
                 <a href="{{pathFor 'searchCache' _id=this._id}}">
                     <input type="button" class="btn btn-primary pull-right" value="Szukaj skrzynki" id="target"> </a>
+                {{/if}}
             </div>
         </div>{{/each}}</div>
     <div class="container">
