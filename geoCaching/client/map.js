@@ -7,7 +7,6 @@ Template.map.helpers({
         if (GoogleMaps.loaded()) {
             // Map initialization options
             var mark = Caches.findOne(this._id);
-            console.log(mark);
             return {
                 center: new google.maps.LatLng(mark.coord_x, mark.coord_y),
                 zoom: 8

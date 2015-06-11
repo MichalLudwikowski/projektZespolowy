@@ -31,6 +31,15 @@ Router.route('help', {
         return Caches.findOne(this.params._id);
     }
 });
+Router.route('profile', {
+    path: '/profile/:name',
+    data: function () {
+        console.log(this.params.name);
+        return Meteor.users.findOne({
+            username: this.params.name
+        });
+    }
+});
 /*
 Router.route('help', {
     path: '/help'

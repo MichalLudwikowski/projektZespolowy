@@ -19,6 +19,8 @@
                     <li class="dropdown pull-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{currentUser.username}} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a id="profile" href="{{pathFor 'profile' name=currentUser.username}}">Mój Profil</a>
+                            </li>
                             <li><a id="myProfile" href="{{pathFor 'myProfile'}}">Edytuj profil</a>
                             </li>
                             <li><a id="userCaches" href="{{pathFor 'userCachesList'}}">Moje skrzynki</a>
