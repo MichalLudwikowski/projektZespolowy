@@ -37,5 +37,10 @@ Template.cacheList.helpers({
             }
         }
         return tmp;
+    },
+    isLogged: function () {
+        if (Meteor.userId())
+            return true;
+        return false;
     }
 });
