@@ -8,7 +8,7 @@
                     <form role="form">
                         <div class="col-md-12">
                             <label for="name" style="color: #2050ff">Nazwa użytkownika:</label>
-                            <input type="text" class="form-control" id="username" value="{{userName}}">
+                            <input type="text" class="form-control" id="username" value="{{userName}}" disabled>
                         </div>
                         <div class="col-md-12">
                             <label for="desc" style="color: #2050ff">Imię:</label>
@@ -25,7 +25,9 @@
                     </form>
 
                     <div class="col-md-12" style="text-align:center;">
-                        <button type="submit" class="btn btn-primary pull-right" style="margin: 7px" id="submitbutton">Zapisz</button>
+                        <a id="profile" href="{{pathFor 'profile' name=currentUser.username}}">
+                            <button type="submit" class="btn btn-primary pull-right" style="margin: 7px" id="submitbutton">Zapisz</button>
+                        </a>
                     </div>
 
                 </div>
